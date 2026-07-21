@@ -1,0 +1,17 @@
+# Runs on every push/PR: pytest + portable C core -Werror + host_link selftest.
+# GUI deps (PySide6/pyqtgraph/PyOpenGL) aren't imported in tests, so they're skipped here for
+# speed/robustness; for full reproducibility, swap the install step below for
+# `pip install -r requirements-lock.txt`. ubuntu-latest ships gcc, but not arm-none-eabi-gcc,
+# so verify.py's ARM -fsyntax-only step auto-skips (optional).
+name: verify
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install "numpy>=1.26,<2.5" "pyserial>=3.5,<4" "pytest>=8.0"
+      - run: python tools/verify.py

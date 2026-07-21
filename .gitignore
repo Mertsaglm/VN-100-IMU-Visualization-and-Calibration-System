@@ -1,0 +1,62 @@
+# ── STM32CubeIDE Build Artifacts ────────────────────────────────
+Debug/
+Release/
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.su
+*.d
+*.o
+
+# ── STM32CubeIDE local/backup files (.cproject/.project intentionally TRACKED) ─────────
+.metadata/
+.settings/
+*.launch
+*.cproject.bak
+.project.bak
+
+# ── STM32CubeMX Temporary Files ──────────────────────────────────
+Middlewares/
+Drivers/CMSIS/DSP/
+*.bak
+
+# ── Python Cache / Virtual Environment ────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# ── VN-100 data logs (dashboard logging) ─────────────────────────
+logs/
+*.vnlog
+
+# ── PC CLI / host self-test build artifacts ──────────────────────
+pc/build/
+/build/
+*.exe
+
+# ── Windows ───────────────────────────────────────────────────────
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ── macOS ─────────────────────────────────────────────────────────
+.DS_Store
+
+# ── Editor ────────────────────────────────────────────────────────
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Local development archive (not released) ───────────────────────
+/arsiv_gelistirme/

@@ -1,0 +1,9 @@
+# VN-100 IMU — PC-side (dashboard, pyvn100, tools, tests) dependencies
+# Requires Python 3.11+ (tested with: 3.12.4)
+
+numpy==2.4.6
+pyserial==3.5
+pyqtgraph==0.14.0
+PySide6==6.11.1
+PyOpenGL==3.1.10
+pytest==9.1.1
